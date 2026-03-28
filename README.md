@@ -78,28 +78,3 @@ http://127.0.0.1:8000
 ```
 http://127.0.0.1:8000/docs
 ```
-Sample Product JSON (POST /products)
-{
-  "id": 7,
-  "name": "Tablet",
-  "description": "Android tablet",
-  "price": 299.99,
-  "quantity": 12
-}
-Features
-FastAPI REST API
-PostgreSQL database integration
-SQLAlchemy ORM
-Automatic database table creation
-Initial sample data insertion
-CORS enabled for frontend (React)
-Future Improvements
-User authentication (JWT)
-Frontend integration (React)
-Docker deployment
-Pagination
-Search & filtering
-Author
-
-Subhranshu Pattnayak
-B.Tech CSE

@@ -78,3 +78,13 @@ http://127.0.0.1:8000
 ```
 http://127.0.0.1:8000/docs
 ```
+## API Endpoints
+| Method         | Endpoint                                                       | Description                                                       |
+| -------------- | -------------------------------------------------------------- | ----------------------------------------------------------------- |
+| GET            | /                                                              | Welcome message                                                   |
+| GET            | /products                                                      | Get all products                                                  |
+| GET            | /products/{id}                                                 | Get product by ID                                                 |
+| POST           | /products                                                      | Add new product                                                   |
+| PUT            | /products/{id}                                                 | Update product                                                    |
+| DELETE         | /products?id=                                                  | Delete product                                                    |
+

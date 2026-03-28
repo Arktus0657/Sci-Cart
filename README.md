@@ -1,6 +1,7 @@
 # FastAPI Product Management API
 
 ## Overview
+
 This project is a **FastAPI-based REST API** that performs **CRUD operations (Create, Read, Update, Delete)** for product management using **FastAPI**, **SQLAlchemy**, and **PostgreSQL**.
 
 The API allows you to:
@@ -15,6 +16,7 @@ The database is automatically initialized with sample product data when the serv
 ---
 
 ## Tech Stack
+
 - **FastAPI** – Backend framework
 - **PostgreSQL** – Database
 - **SQLAlchemy** – ORM
@@ -24,67 +26,133 @@ The database is automatically initialized with sample product data when the serv
 ---
 
 ## Project Structure
+
 ```
-├── db_config.py # Database connection configuration
-├── db_models.py # SQLAlchemy database models
-├── models.py # Pydantic models (request/response schemas)
-├── main.py # FastAPI application and API routes
+├── db_config.py           # Database connection configuration
+├── db_models.py           # SQLAlchemy database models
+├── models.py              # Pydantic models (request/response schemas)
+├── main.py                # FastAPI application and API routes
 ├── README.md
 ├── .gitignore
-└── fastapioneshot/ # Virtual environment
+└── fastapioneshot/        # Virtual environment
 ```
+
 ---
+
 ## Database Configuration
+
 Update the PostgreSQL connection URL in `db_config.py` if needed:
 
 ```python
 db_url = "postgresql://postgres:1234@localhost:5432/fastapitestdb"
 ```
-Make sure PostgreSQL is running and the database fastapitestdb exists.
+
+Make sure PostgreSQL is running and the database `fastapitestdb` exists.
+
 ---
+
 ## Installation & Setup
 
 ### 1. Clone the repository
+
 ```bash
 git clone <your-repo-url>
 cd <your-repo-folder>
 ```
+
 ### 2. Create virtual environment
+
 ```bash
 python -m venv fastapioneshot
 ```
+
 ### 3. Activate virtual environment
+
 **Windows:**
 ```bash
 fastapioneshot\Scripts\activate
 ```
+
 **Linux/Mac:**
 ```bash
 source fastapioneshot/bin/activate
 ```
+
 ### 4. Install dependencies
+
 ```bash
 pip install fastapi uvicorn sqlalchemy psycopg2
 ```
+
 ### 5. Run the server
+
 ```bash
 uvicorn main:app --reload
 ```
+
 **Server will start at:**
 ```
 http://127.0.0.1:8000
 ```
+
 **Swagger UI:**
 ```
 http://127.0.0.1:8000/docs
 ```
-## API Endpoints
-| Method         | Endpoint                                                       | Description                                                       |
-| -------------- | -------------------------------------------------------------- | ----------------------------------------------------------------- |
-| GET            | /                                                              | Welcome message                                                   |
-| GET            | /products                                                      | Get all products                                                  |
-| GET            | /products/{id}                                                 | Get product by ID                                                 |
-| POST           | /products                                                      | Add new product                                                   |
-| PUT            | /products/{id}                                                 | Update product                                                    |
-| DELETE         | /products?id=                                                  | Delete product                                                    |
 
+---
+
+## API Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | / | Welcome message |
+| GET | /products | Get all products |
+| GET | /products/{id} | Get product by ID |
+| POST | /products | Add new product |
+| PUT | /products/{id} | Update product |
+| DELETE | /products?id= | Delete product |
+
+---
+
+## Sample Product JSON
+
+**POST /products**
+
+```json
+{
+    "id": 7,
+    "name": "Tablet",
+    "description": "Android tablet",
+    "price": 299.99,
+    "quantity": 12
+}
+```
+
+---
+
+## Features
+
+- FastAPI REST API
+- PostgreSQL database integration
+- SQLAlchemy ORM
+- Automatic database table creation
+- Initial sample data insertion
+- CORS enabled for frontend (React)
+
+---
+
+## Future Improvements
+
+- User authentication (JWT)
+- Frontend integration (React)
+- Docker deployment
+- Pagination
+- Search & filtering
+
+---
+
+## Author
+
+**Subhranshu Pattnayak**  
+B.Tech CSE
